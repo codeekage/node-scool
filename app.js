@@ -80,7 +80,7 @@ app.use(function(req, res, next) {
 //ERROR HANDLERS
 app.use((err, req, res, next) => {
     console.log(err.message);
-    res.status(422).send(err.message)
+    res.status(422).send({ error: err.message })
 })
 
 app.use('/', routes);

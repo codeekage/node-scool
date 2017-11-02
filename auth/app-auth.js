@@ -1,5 +1,8 @@
 var User = require('../models/admin-model'),
     Student = require('../models/student-model');
+
+
+//REGISTER ADMIN
 module.exports.registerUser = (req, res) => {
     var name = req.body.name;
     var email = req.body.email;
@@ -39,6 +42,7 @@ module.exports.registerUser = (req, res) => {
     }
 }
 
+//REGISTER A STUDENT
 module.exports.registerStudent = (req, res) => {
     // Validation
     req.checkBody('stud_id', 'student_id must be provided').notEmpty();
