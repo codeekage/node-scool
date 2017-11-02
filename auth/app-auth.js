@@ -1,5 +1,5 @@
-var User = require('../models/admin-model'),
-    Student = require('../models/student-model');
+var User = require('../app_modules/functions/admin-function'),
+    Student = require('../app_modules/functions/student-function');
 
 
 //REGISTER ADMIN

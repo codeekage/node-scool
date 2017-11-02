@@ -1,7 +1,7 @@
 var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    User = require('../models/admin-model'),
-    Student = require('../models/student-model');
+    User = require('../app_modules/functions/admin-function'),
+    Student = require('../app_modules/functions/student-function');
 
 passport.use(new LocalStrategy(
     (username, password, done) => {

@@ -1,5 +1,5 @@
 const express = require('express'),
-    Videos = require('../models/youtube-model'),
+    Videos = require('../models/video-model'),
     router = express.Router();
 
 router.get('/videos', (req, res, next) => {
