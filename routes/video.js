@@ -3,7 +3,7 @@ const express = require('express'),
     router = express.Router();
 
 router.get('/videos', (req, res, next) => {
-    Videos.find({}).then(videos => {
+    Videos.find({}).then(video => {
         res.send(video)
     }).catch(next)
 })

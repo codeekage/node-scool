@@ -13,7 +13,15 @@ module.exports = (config) => {
         useMongoClient: true,
     }).then(() => {
         console.log(`Connected to ${dbURI}`);
-    }).catch((e) => {
-        throw e;
+    }).catch((err) => {
+        switch (err.name) {
+            case 'MongoError':
+                console.log(`Please check that server is running your machine ${dbURI}`)
+                break;
+
+            default:
+                throw e;
+                break;
+        }
     });
 };

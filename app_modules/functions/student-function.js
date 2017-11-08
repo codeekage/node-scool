@@ -1,5 +1,5 @@
 const StudentModel = require('../../models/student-model'),
-    bcrypt = require('bcrypt');
+    bcrypt = require('bcryptjs');
 
 module.exports.createStudent = function(newStudent, callback) {
     bcrypt.genSalt(10, function(err, salt) {

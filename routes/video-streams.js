@@ -12,9 +12,6 @@ let gfs;
 
 conn.once("open", () => {
     gfs = Grid(conn.db);
-    router.get('/', (req, res) => {
-        res.send('Hello Housem !');
-    });
     router.get('/img/:imgname', (req, res) => {
         let imgname = req.params.imgname;
         gfs.files.find({
@@ -52,7 +49,6 @@ conn.once("open", () => {
     });
     router.post('/img', (req, res) => {
         let part = req.files.file;
-        //conosle.log(part)
         let writeStream = gfs.createWriteStream({
             filename: 'img_' + part.name,
             mode: 'w',

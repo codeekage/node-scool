@@ -1,5 +1,5 @@
 var User = require('../../models/admin-model'),
-    bcrypt = require('bcrypt');
+    bcrypt = require('bcryptjs');
 
 module.exports.createUser = (newUser, callback) => {
     bcrypt.genSalt(10, (err, salt) => {

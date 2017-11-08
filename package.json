@@ -1,17 +1,17 @@
 {
-    "name": "loginapp",
+    "name": "node-scool",
     "version": "1.0.0",
-    "description": "Simple authentication system",
+    "description": "demo",
     "main": "app.js",
     "scripts": {
-        "start": "node app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Brad Traversy",
-    "license": "ISC",
+    "author": "me",
+    "license": "MIT",
     "dependencies": {
         "bcryptjs": "*",
         "body-parser": "*",
+        "busboy-body-parser": "^0.3.0",
         "connect-flash": "*",
         "cookie-parser": "^1.4.1",
         "express": "*",
@@ -19,8 +19,10 @@
         "express-messages": "*",
         "express-session": "*",
         "express-validator": "*",
+        "gridfs-stream": "^1.1.1",
         "mongodb": "*",
         "mongoose": "*",
+        "morgan": "^1.9.0",
         "passport": "*",
         "passport-http": "*",
         "passport-local": "*"
